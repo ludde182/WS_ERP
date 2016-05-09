@@ -129,8 +129,6 @@ namespace WS_ERP
         //---------------------- INSERT/UPDATE/DELETE QUERIES ----------------------//
 
 
-
-
        public bool UpdateEmployee(string firstName, string no)
         {
             bool b = false;
@@ -161,6 +159,28 @@ namespace WS_ERP
                 string query = "DELETE FROM [CRONUS Sverige AB$Employee] WHERE [No_] = @no";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@no", no);
+                cmd.ExecuteReader();
+                b = true;
+            }
+            catch
+            {
+                b = false;
+            }
+
+            return b;
+        }
+
+
+        public bool CreateEmployee(string no, string firstName)
+        {
+            bool b = false;
+            try
+            {
+                con.Open();
+                string query = "INSERT INTO [CRONUS Sverige AB$Employee] (_No, [First Name]) VALUES (@no, @firstName);";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@no", no);
+                cmd.Parameters.AddWithValue("@firstName", firstName);
                 cmd.ExecuteReader();
                 b = true;
             }

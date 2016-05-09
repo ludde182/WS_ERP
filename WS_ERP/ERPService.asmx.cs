@@ -58,7 +58,8 @@ namespace WS_ERP
         public List<string> GetEmpColumns1MetaData() { return ctrl.GetEmpColumns1MetaData(); }
         [WebMethod]
         public List<string> GetEmpColumns2MetaData() { return ctrl.GetEmpColumns2MetaData(); }
-
+        [WebMethod]
+        public bool CreateEmployee(string no, string firstName ) { return ctrl.CreateEmployee(no, firstName); }
 
         [WebMethod]
         public string HelloWorld()

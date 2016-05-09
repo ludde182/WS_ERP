@@ -64,6 +64,10 @@ namespace WS_ERP
         {
             return dal.DeleteEmployee(no);
         }
+        public bool CreateEmployee(string no, string firstName)
+        {
+            return dal.CreateEmployee(no, firstName);
+        }
 
 
         //---------------------------------
