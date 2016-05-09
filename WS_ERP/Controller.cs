@@ -55,9 +55,14 @@ namespace WS_ERP
         //--------------------------------
         //Add update delete osv
 
-        public void UpdateEmployee()
+        public bool UpdateEmployee(string firstName, string no)
         {
+            return dal.UpdateEmployee(firstName, no);
+        }
 
+        public bool DeleteEmployee(string no)
+        {
+            return dal.DeleteEmployee(no);
         }
 
 

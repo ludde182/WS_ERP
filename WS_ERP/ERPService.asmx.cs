@@ -66,12 +66,19 @@ namespace WS_ERP
             return "Hello World";
         }
 
-   /*     [WebMethod]
-        //GET COLUMN NAMES
-        public List<string> GetColumns(string s)
+        [WebMethod]
+        public bool UpdateEmployee(string firstName, string no)
         {
-            return ctrl.GetColumns(s);
-        } */
+            return ctrl.UpdateEmployee(firstName, no);
+        }
+
+        [WebMethod]
+        public bool DeleteEmployee(string no)
+        {
+            return ctrl.DeleteEmployee(no);
+        }
+
+
 
         [WebMethod]
         //EMPLOYEE DATA

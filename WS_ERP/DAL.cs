@@ -23,13 +23,14 @@ namespace WS_ERP
 
         public List<List<string>> ShowData(string s)
         {
+            List<List<string>> list = new List<List<string>>();
+
             try
             {
                 con.Open();
                 string query = s;
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader datareader = cmd.ExecuteReader();
-                List<List<string>> list = new List<List<string>>();
 
                 if (datareader != null)
                 {
@@ -68,14 +69,13 @@ namespace WS_ERP
                     }
                     return list;
                 }
-                return list;
             }
             catch (Exception e)
             {
+                list = null;
                 Console.WriteLine(e.InnerException.ToString());
-                return null;
-
             }
+            return list;
         }
 
 
@@ -106,7 +106,7 @@ namespace WS_ERP
         }
 
 
-        //---------------------- VIEW COMBO BOX METHODS ----------------------//
+        //---------------------- GET METADATA: COLUMNS METHOD ----------------------//
         public List<string> GetTableMetaData(string s)
         {
             con.Open();
@@ -131,6 +131,47 @@ namespace WS_ERP
 
 
 
+       public bool UpdateEmployee(string firstName, string no)
+        {
+            bool b = false;
+            try
+            {
+                con.Open();
+                string query = "UPDATE [CRONUS Sverige AB$Employee] SET [First Name] = @firstName WHERE [No_] = @no";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@firstName", firstName);
+                cmd.Parameters.AddWithValue("@no", no);
+                cmd.ExecuteReader();
+                b = true;
+            }
+            catch 
+            {
+                b = false;
+            }
+
+            return b;
+        }
+
+        public bool DeleteEmployee(string no)
+        {
+            bool b = false;
+            try
+            {
+                con.Open();
+                string query = "DELETE FROM [CRONUS Sverige AB$Employee] WHERE [No_] = @no";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@no", no);
+                cmd.ExecuteReader();
+                b = true;
+            }
+            catch
+            {
+                b = false;
+            }
+
+            return b;
+        }
+
 
 
         //---------------------- SELECT QUERIES ----------------------//
@@ -138,14 +179,14 @@ namespace WS_ERP
         //EMPLOYEE DATA
         public List<List<string>> GetEmployee()
         {
-            string s = "SELECT [First Name],[No_] from[CRONUS Sverige AB$Employee];";
+            string s = "SELECT [No_],[First Name] from[CRONUS Sverige AB$Employee];";
             return ShowData(s);
         }
 
         //METADATA
         public List<string> GetEmployeeMetaData()
         {
-            string s = "SELECT [First Name],[No_] from[CRONUS Sverige AB$Employee]; ";
+            string s = "SELECT [No_],[First Name] from[CRONUS Sverige AB$Employee]; ";
             return GetTableMetaData(s);
         }
 
@@ -154,7 +195,7 @@ namespace WS_ERP
         //PERSONAL OCH SLÄKTINGAR 
         public List<List<string>> GetEmpRelativeData()
         {
-            string s = "SELECT[CRONUS Sverige AB$Employee].[First Name],[CRONUS Sverige AB$Employee].[Last Name], No_, [Relative Code],"
+            string s = "SELECT  No_,[CRONUS Sverige AB$Employee].[First Name],[CRONUS Sverige AB$Employee].[Last Name],[Relative Code],"
                                                 + "[CRONUS Sverige AB$Employee Relative].[First Name], [CRONUS Sverige AB$Employee Relative].[Last Name] FROM [CRONUS Sverige AB$Employee] "
                                                 + "INNER JOIN [CRONUS Sverige AB$Employee Relative] ON  No_ = [Employee No_];";
             return ShowData(s);
@@ -163,7 +204,7 @@ namespace WS_ERP
         //METADATA
         public List<string> GetEmpRelativeMetaData()
         {
-            string s = "SELECT[CRONUS Sverige AB$Employee].[First Name],[CRONUS Sverige AB$Employee].[Last Name], No_, [Relative Code],"
+            string s = "SELECT No_, [CRONUS Sverige AB$Employee].[First Name],[CRONUS Sverige AB$Employee].[Last Name], [Relative Code],"
                                                 + "[CRONUS Sverige AB$Employee Relative].[First Name], [CRONUS Sverige AB$Employee Relative].[Last Name] FROM [CRONUS Sverige AB$Employee] "
                                                 + "INNER JOIN [CRONUS Sverige AB$Employee Relative] ON  No_ = [Employee No_];";
             return GetTableMetaData(s);

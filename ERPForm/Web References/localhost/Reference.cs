@@ -57,6 +57,10 @@ namespace ERPForm.localhost {
         
         private System.Threading.SendOrPostCallback HelloWorldOperationCompleted;
         
+        private System.Threading.SendOrPostCallback UpdateEmployeeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteEmployeeOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetEmployeeOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetEmpRelativeDataOperationCompleted;
@@ -158,6 +162,12 @@ namespace ERPForm.localhost {
         
         /// <remarks/>
         public event HelloWorldCompletedEventHandler HelloWorldCompleted;
+        
+        /// <remarks/>
+        public event UpdateEmployeeCompletedEventHandler UpdateEmployeeCompleted;
+        
+        /// <remarks/>
+        public event DeleteEmployeeCompletedEventHandler DeleteEmployeeCompleted;
         
         /// <remarks/>
         public event GetEmployeeCompletedEventHandler GetEmployeeCompleted;
@@ -567,6 +577,66 @@ namespace ERPForm.localhost {
             if ((this.HelloWorldCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.HelloWorldCompleted(this, new HelloWorldCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://erpimlement.org/UpdateEmployee", RequestNamespace="http://erpimlement.org/", ResponseNamespace="http://erpimlement.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool UpdateEmployee(string firstName, string no) {
+            object[] results = this.Invoke("UpdateEmployee", new object[] {
+                        firstName,
+                        no});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateEmployeeAsync(string firstName, string no) {
+            this.UpdateEmployeeAsync(firstName, no, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateEmployeeAsync(string firstName, string no, object userState) {
+            if ((this.UpdateEmployeeOperationCompleted == null)) {
+                this.UpdateEmployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateEmployeeOperationCompleted);
+            }
+            this.InvokeAsync("UpdateEmployee", new object[] {
+                        firstName,
+                        no}, this.UpdateEmployeeOperationCompleted, userState);
+        }
+        
+        private void OnUpdateEmployeeOperationCompleted(object arg) {
+            if ((this.UpdateEmployeeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateEmployeeCompleted(this, new UpdateEmployeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://erpimlement.org/DeleteEmployee", RequestNamespace="http://erpimlement.org/", ResponseNamespace="http://erpimlement.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool DeleteEmployee(string no) {
+            object[] results = this.Invoke("DeleteEmployee", new object[] {
+                        no});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeleteEmployeeAsync(string no) {
+            this.DeleteEmployeeAsync(no, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteEmployeeAsync(string no, object userState) {
+            if ((this.DeleteEmployeeOperationCompleted == null)) {
+                this.DeleteEmployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteEmployeeOperationCompleted);
+            }
+            this.InvokeAsync("DeleteEmployee", new object[] {
+                        no}, this.DeleteEmployeeOperationCompleted, userState);
+        }
+        
+        private void OnDeleteEmployeeOperationCompleted(object arg) {
+            if ((this.DeleteEmployeeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteEmployeeCompleted(this, new DeleteEmployeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1268,6 +1338,58 @@ namespace ERPForm.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void UpdateEmployeeCompletedEventHandler(object sender, UpdateEmployeeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateEmployeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateEmployeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void DeleteEmployeeCompletedEventHandler(object sender, DeleteEmployeeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteEmployeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteEmployeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
             }
         }
     }

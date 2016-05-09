@@ -16,21 +16,34 @@ namespace ERPForm
             InitializeComponent();
             comboBox1.DataSource = client.EmployeeComboBox();
             comboBoxMetaData.DataSource = client.MetaDataComboBox();
+            dataGridViewERP.AllowUserToAddRows = false;
+            dataGridViewERP.AllowUserToResizeRows = false;
+            dataGridViewERP.AllowUserToResizeColumns = false;
+            dataGridViewERP.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
         }
 
         private void Form1_Load(
         object sender, EventArgs e)
         {
+
         }
+
+
+
 
 
         private void btnPopulate_Click(object sender, EventArgs e)
         {
+            ClearTable();
+
             if (comboBox1.SelectedIndex == 0)
             {
                 string[][] dalList = client.GetEmployee();
                 string[] colList = client.GetEmployeeMetaData();
                 dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.Columns[0].ReadOnly = true;
+
             }
 
             if (comboBox1.SelectedIndex == 1)
@@ -65,57 +78,57 @@ namespace ERPForm
             {
                 string[][] dalList = client.GetAllPK();
                 string[] colList = client.GetAllPKMetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
             if (comboBoxMetaData.SelectedIndex == 1)
             {
                 string[][] dalList = client.GetIndexes();
                 string[] colList = client.GetIndexesMetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
             if (comboBoxMetaData.SelectedIndex == 2)
             {
                 string[][] dalList = client.GetAllConstraints();
                 string[] colList = client.GetAllConstraintsMetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
             if (comboBoxMetaData.SelectedIndex == 3)
             {
                 string[][] dalList = client.GetTable1();
                 string[] colList = client.GetTable1MetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
             if (comboBoxMetaData.SelectedIndex == 4)
             {
                 string[][] dalList = client.GetTable2();
                 string[] colList = client.GetTable2MetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
             if (comboBoxMetaData.SelectedIndex == 5)
             {
                 string[][] dalList = client.GetEmpColumns1();
                 string[] colList = client.GetEmpColumns1MetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
             if (comboBoxMetaData.SelectedIndex == 6)
             {
                 string[][] dalList = client.GetEmpColumns2();
                 string[] colList = client.GetEmpColumns2MetaData();
-               dataGridViewERP.DataSource = FillTable(dalList, colList);
+                dataGridViewERP.DataSource = FillTable(dalList, colList);
             }
 
         }
 
         public DataTable FillTable(string[][] dalList, string[] colList)
         {
-            var colcount = colList.Count();
-            var rowcount = dalList.Count();
+            int colcount = colList.Count();
+            int rowcount = dalList.Count();
 
             DataTable table = new DataTable();
             for (int i = 0; i < colcount; i++)
@@ -130,25 +143,98 @@ namespace ERPForm
             return table;
         }
 
-
-
-
-        public DataTable PopulateTable(string[][] dalList)
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            var colcount = dalList[0].Count();
-            var rowcount = dalList.Count();
+            
+            DataGridViewRow row = dataGridViewERP.SelectedRows[0];
 
-            DataTable table = new DataTable();
-            for (int i = 0; i < colcount; i++)
+            if (row.Cells.Count > 0)
             {
-                table.Columns.Add();
+                bool rowIsEmpty = true;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                    labelMessage.Text = "Select a non NULL row";
+                else
+                {
+                    string firstName = row.Cells["First Name"].Value.ToString();
+                    string no = row.Cells["No_"].Value.ToString();
+
+                    if (client.UpdateEmployee(firstName, no))
+                    {
+                        dataGridViewERP.ClearSelection();
+                        btnPopulate.PerformClick();
+                        labelMessage.Text = "SUCCESS! Employee with No_ " + no + " has been updated!";
+                    }
+
+                }
+
+            }
+        }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+            ClearTable();
+            buttonInsert.Visible = false;
+
+        }
+
+        private void buttonInsertConfirm_Click(object sender, EventArgs e)
+        {
+            ClearTable();
+            dataGridViewERP.AllowUserToAddRows = true;
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            ClearTable();
+            DataGridViewRow row = dataGridViewERP.SelectedRows[0];
+
+            if (row.Cells.Count > 0)
+            {
+                bool rowIsEmpty = true;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        rowIsEmpty = false;
+                        break;
+                    }
+                }
+
+                if (rowIsEmpty)
+                    labelMessage.Text = "Select a non NULL row";
+                else
+                {
+                    string no = row.Cells["No_"].Value.ToString();
+
+                    if (client.DeleteEmployee(no))
+                    {
+                        dataGridViewERP.ClearSelection();
+                        btnPopulate.PerformClick();
+                        labelMessage.Text = "SUCCESS! Employee with No_ " + no + " has been updated!";
+                        
+                    }
+
+                }
+
             }
 
-            foreach (string[] sa in dalList)
-            {
-                table.Rows.Add(sa);
-            }
-            return table;
+        }
+
+        private void ClearTable()
+        {
+            dataGridViewERP.DataSource = null;
+            dataGridViewERP.Rows.Clear();
+            labelMessage.ResetText();
         }
     }
 }
