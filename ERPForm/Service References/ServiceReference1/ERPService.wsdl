@@ -12,17 +12,32 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Fill">
+      <s:element name="GetColumns">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="s" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="FillResponse">
+      <s:element name="GetColumnsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="FillResult" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetColumnsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmployee">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeResult" type="tns:ArrayOfArrayOfString" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -31,28 +46,103 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfString">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="GetEmpTbl">
+      <s:element name="GetEmpRelativeData">
         <s:complexType />
       </s:element>
-      <s:element name="GetEmpTblResponse">
+      <s:element name="GetEmpRelativeDataResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetEmpTblResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpRelativeDataResult" type="tns:ArrayOfArrayOfString" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="ShowAbsData">
+      <s:element name="GetEmpAbsData">
         <s:complexType />
       </s:element>
-      <s:element name="ShowAbsDataResponse">
+      <s:element name="GetEmpAbsDataResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ShowAbsDataResult" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpAbsDataResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpTopAbs">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmpTopAbsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpTopAbsResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPK">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllPKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPKResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIndexes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIndexesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIndexesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllConstraints">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllConstraintsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllConstraintsResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTable1">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTable1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTable1Result" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTable2">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTable2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTable2Result" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpColumns1">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmpColumns1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpColumns1Result" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpColumns2">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmpColumns2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpColumns2Result" type="tns:ArrayOfArrayOfString" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -64,40 +154,130 @@
   <wsdl:message name="HelloWorldSoapOut">
     <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
   </wsdl:message>
-  <wsdl:message name="FillSoapIn">
-    <wsdl:part name="parameters" element="tns:Fill" />
+  <wsdl:message name="GetColumnsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColumns" />
   </wsdl:message>
-  <wsdl:message name="FillSoapOut">
-    <wsdl:part name="parameters" element="tns:FillResponse" />
+  <wsdl:message name="GetColumnsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetColumnsResponse" />
   </wsdl:message>
-  <wsdl:message name="GetEmpTblSoapIn">
-    <wsdl:part name="parameters" element="tns:GetEmpTbl" />
+  <wsdl:message name="GetEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
   </wsdl:message>
-  <wsdl:message name="GetEmpTblSoapOut">
-    <wsdl:part name="parameters" element="tns:GetEmpTblResponse" />
+  <wsdl:message name="GetEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
   </wsdl:message>
-  <wsdl:message name="ShowAbsDataSoapIn">
-    <wsdl:part name="parameters" element="tns:ShowAbsData" />
+  <wsdl:message name="GetEmpRelativeDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpRelativeData" />
   </wsdl:message>
-  <wsdl:message name="ShowAbsDataSoapOut">
-    <wsdl:part name="parameters" element="tns:ShowAbsDataResponse" />
+  <wsdl:message name="GetEmpRelativeDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpRelativeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpAbsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpAbsData" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpAbsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpAbsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpTopAbsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpTopAbs" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpTopAbsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpTopAbsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPKSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPK" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPKSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIndexesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIndexes" />
+  </wsdl:message>
+  <wsdl:message name="GetIndexesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIndexesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllConstraintsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllConstraints" />
+  </wsdl:message>
+  <wsdl:message name="GetAllConstraintsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllConstraintsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTable1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetTable1" />
+  </wsdl:message>
+  <wsdl:message name="GetTable1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetTable1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetTable2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetTable2" />
+  </wsdl:message>
+  <wsdl:message name="GetTable2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetTable2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpColumns1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpColumns1" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpColumns1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpColumns1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpColumns2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpColumns2" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpColumns2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpColumns2Response" />
   </wsdl:message>
   <wsdl:portType name="ERPServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="Fill">
-      <wsdl:input message="tns:FillSoapIn" />
-      <wsdl:output message="tns:FillSoapOut" />
+    <wsdl:operation name="GetColumns">
+      <wsdl:input message="tns:GetColumnsSoapIn" />
+      <wsdl:output message="tns:GetColumnsSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetEmpTbl">
-      <wsdl:input message="tns:GetEmpTblSoapIn" />
-      <wsdl:output message="tns:GetEmpTblSoapOut" />
+    <wsdl:operation name="GetEmployee">
+      <wsdl:input message="tns:GetEmployeeSoapIn" />
+      <wsdl:output message="tns:GetEmployeeSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ShowAbsData">
-      <wsdl:input message="tns:ShowAbsDataSoapIn" />
-      <wsdl:output message="tns:ShowAbsDataSoapOut" />
+    <wsdl:operation name="GetEmpRelativeData">
+      <wsdl:input message="tns:GetEmpRelativeDataSoapIn" />
+      <wsdl:output message="tns:GetEmpRelativeDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAbsData">
+      <wsdl:input message="tns:GetEmpAbsDataSoapIn" />
+      <wsdl:output message="tns:GetEmpAbsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTopAbs">
+      <wsdl:input message="tns:GetEmpTopAbsSoapIn" />
+      <wsdl:output message="tns:GetEmpTopAbsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPK">
+      <wsdl:input message="tns:GetAllPKSoapIn" />
+      <wsdl:output message="tns:GetAllPKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexes">
+      <wsdl:input message="tns:GetIndexesSoapIn" />
+      <wsdl:output message="tns:GetIndexesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConstraints">
+      <wsdl:input message="tns:GetAllConstraintsSoapIn" />
+      <wsdl:output message="tns:GetAllConstraintsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTable1">
+      <wsdl:input message="tns:GetTable1SoapIn" />
+      <wsdl:output message="tns:GetTable1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTable2">
+      <wsdl:input message="tns:GetTable2SoapIn" />
+      <wsdl:output message="tns:GetTable2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpColumns1">
+      <wsdl:input message="tns:GetEmpColumns1SoapIn" />
+      <wsdl:output message="tns:GetEmpColumns1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpColumns2">
+      <wsdl:input message="tns:GetEmpColumns2SoapIn" />
+      <wsdl:output message="tns:GetEmpColumns2SoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ERPServiceSoap" type="tns:ERPServiceSoap">
@@ -111,8 +291,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Fill">
-      <soap:operation soapAction="http://erpimlement.org/Fill" style="document" />
+    <wsdl:operation name="GetColumns">
+      <soap:operation soapAction="http://erpimlement.org/GetColumns" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -120,8 +300,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetEmpTbl">
-      <soap:operation soapAction="http://erpimlement.org/GetEmpTbl" style="document" />
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://erpimlement.org/GetEmployee" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -129,8 +309,89 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ShowAbsData">
-      <soap:operation soapAction="http://erpimlement.org/ShowAbsData" style="document" />
+    <wsdl:operation name="GetEmpRelativeData">
+      <soap:operation soapAction="http://erpimlement.org/GetEmpRelativeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAbsData">
+      <soap:operation soapAction="http://erpimlement.org/GetEmpAbsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTopAbs">
+      <soap:operation soapAction="http://erpimlement.org/GetEmpTopAbs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPK">
+      <soap:operation soapAction="http://erpimlement.org/GetAllPK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexes">
+      <soap:operation soapAction="http://erpimlement.org/GetIndexes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConstraints">
+      <soap:operation soapAction="http://erpimlement.org/GetAllConstraints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTable1">
+      <soap:operation soapAction="http://erpimlement.org/GetTable1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTable2">
+      <soap:operation soapAction="http://erpimlement.org/GetTable2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpColumns1">
+      <soap:operation soapAction="http://erpimlement.org/GetEmpColumns1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpColumns2">
+      <soap:operation soapAction="http://erpimlement.org/GetEmpColumns2" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -150,8 +411,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Fill">
-      <soap12:operation soapAction="http://erpimlement.org/Fill" style="document" />
+    <wsdl:operation name="GetColumns">
+      <soap12:operation soapAction="http://erpimlement.org/GetColumns" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -159,8 +420,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetEmpTbl">
-      <soap12:operation soapAction="http://erpimlement.org/GetEmpTbl" style="document" />
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://erpimlement.org/GetEmployee" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -168,8 +429,89 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ShowAbsData">
-      <soap12:operation soapAction="http://erpimlement.org/ShowAbsData" style="document" />
+    <wsdl:operation name="GetEmpRelativeData">
+      <soap12:operation soapAction="http://erpimlement.org/GetEmpRelativeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpAbsData">
+      <soap12:operation soapAction="http://erpimlement.org/GetEmpAbsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpTopAbs">
+      <soap12:operation soapAction="http://erpimlement.org/GetEmpTopAbs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPK">
+      <soap12:operation soapAction="http://erpimlement.org/GetAllPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexes">
+      <soap12:operation soapAction="http://erpimlement.org/GetIndexes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConstraints">
+      <soap12:operation soapAction="http://erpimlement.org/GetAllConstraints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTable1">
+      <soap12:operation soapAction="http://erpimlement.org/GetTable1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTable2">
+      <soap12:operation soapAction="http://erpimlement.org/GetTable2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpColumns1">
+      <soap12:operation soapAction="http://erpimlement.org/GetEmpColumns1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpColumns2">
+      <soap12:operation soapAction="http://erpimlement.org/GetEmpColumns2" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

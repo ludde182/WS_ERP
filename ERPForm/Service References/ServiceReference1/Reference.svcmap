@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fe8d0281-27f5-44f1-843d-b2a21f70fb6d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc00da1c-496d-4494-bfe3-7e55f9df8265" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:61600/ERPService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ERPService.wsdl" MetadataType="Wsdl" ID="dee66cf9-1ecf-43b1-a05f-8279566b292a" SourceId="1" SourceUrl="http://localhost:61600/ERPService.asmx?wsdl" />
-    <MetadataFile FileName="ERPService.disco" MetadataType="Disco" ID="e3cf9522-a09e-4e1a-957d-6a7d844b1585" SourceId="1" SourceUrl="http://localhost:61600/ERPService.asmx?disco" />
+    <MetadataFile FileName="ERPService.wsdl" MetadataType="Wsdl" ID="41809a8e-02a5-43d5-b206-13e8938ee261" SourceId="1" SourceUrl="http://localhost:61600/ERPService.asmx?wsdl" />
+    <MetadataFile FileName="ERPService.disco" MetadataType="Disco" ID="ecccf0e5-bec8-4422-a3ae-339b63bdeba6" SourceId="1" SourceUrl="http://localhost:61600/ERPService.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

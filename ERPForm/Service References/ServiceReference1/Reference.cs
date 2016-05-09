@@ -32,25 +32,88 @@ namespace ERPForm.ServiceReference1 {
         System.Threading.Tasks.Task<ERPForm.ServiceReference1.HelloWorldResponse> HelloWorldAsync(ERPForm.ServiceReference1.HelloWorldRequest request);
         
         // CODEGEN: Generating message contract since element name s from namespace http://erpimlement.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/Fill", ReplyAction="*")]
-        ERPForm.ServiceReference1.FillResponse Fill(ERPForm.ServiceReference1.FillRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetColumns", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetColumnsResponse GetColumns(ERPForm.ServiceReference1.GetColumnsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/Fill", ReplyAction="*")]
-        System.Threading.Tasks.Task<ERPForm.ServiceReference1.FillResponse> FillAsync(ERPForm.ServiceReference1.FillRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetColumns", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetColumnsResponse> GetColumnsAsync(ERPForm.ServiceReference1.GetColumnsRequest request);
         
-        // CODEGEN: Generating message contract since element name GetEmpTblResult from namespace http://erpimlement.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpTbl", ReplyAction="*")]
-        ERPForm.ServiceReference1.GetEmpTblResponse GetEmpTbl(ERPForm.ServiceReference1.GetEmpTblRequest request);
+        // CODEGEN: Generating message contract since element name GetEmployeeResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmployee", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetEmployeeResponse GetEmployee(ERPForm.ServiceReference1.GetEmployeeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpTbl", ReplyAction="*")]
-        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpTblResponse> GetEmpTblAsync(ERPForm.ServiceReference1.GetEmpTblRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmployee", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmployeeResponse> GetEmployeeAsync(ERPForm.ServiceReference1.GetEmployeeRequest request);
         
-        // CODEGEN: Generating message contract since element name ShowAbsDataResult from namespace http://erpimlement.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/ShowAbsData", ReplyAction="*")]
-        ERPForm.ServiceReference1.ShowAbsDataResponse ShowAbsData(ERPForm.ServiceReference1.ShowAbsDataRequest request);
+        // CODEGEN: Generating message contract since element name GetEmpRelativeDataResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpRelativeData", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetEmpRelativeDataResponse GetEmpRelativeData(ERPForm.ServiceReference1.GetEmpRelativeDataRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/ShowAbsData", ReplyAction="*")]
-        System.Threading.Tasks.Task<ERPForm.ServiceReference1.ShowAbsDataResponse> ShowAbsDataAsync(ERPForm.ServiceReference1.ShowAbsDataRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpRelativeData", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpRelativeDataResponse> GetEmpRelativeDataAsync(ERPForm.ServiceReference1.GetEmpRelativeDataRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEmpAbsDataResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpAbsData", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetEmpAbsDataResponse GetEmpAbsData(ERPForm.ServiceReference1.GetEmpAbsDataRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpAbsData", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpAbsDataResponse> GetEmpAbsDataAsync(ERPForm.ServiceReference1.GetEmpAbsDataRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetEmpTopAbsResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpTopAbs", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetEmpTopAbsResponse GetEmpTopAbs(ERPForm.ServiceReference1.GetEmpTopAbsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpTopAbs", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpTopAbsResponse> GetEmpTopAbsAsync(ERPForm.ServiceReference1.GetEmpTopAbsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllPKResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetAllPK", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetAllPKResponse GetAllPK(ERPForm.ServiceReference1.GetAllPKRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetAllPK", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetAllPKResponse> GetAllPKAsync(ERPForm.ServiceReference1.GetAllPKRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetIndexesResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetIndexes", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetIndexesResponse GetIndexes(ERPForm.ServiceReference1.GetIndexesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetIndexes", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetIndexesResponse> GetIndexesAsync(ERPForm.ServiceReference1.GetIndexesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllConstraintsResult from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetAllConstraints", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetAllConstraintsResponse GetAllConstraints(ERPForm.ServiceReference1.GetAllConstraintsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetAllConstraints", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetAllConstraintsResponse> GetAllConstraintsAsync(ERPForm.ServiceReference1.GetAllConstraintsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetTable1Result from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetTable1", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetTable1Response GetTable1(ERPForm.ServiceReference1.GetTable1Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetTable1", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetTable1Response> GetTable1Async(ERPForm.ServiceReference1.GetTable1Request request);
+        
+        // CODEGEN: Generating message contract since element name GetTable2Result from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetTable2", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetTable2Response GetTable2(ERPForm.ServiceReference1.GetTable2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetTable2", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetTable2Response> GetTable2Async(ERPForm.ServiceReference1.GetTable2Request request);
+        
+        // CODEGEN: Generating message contract since element name GetEmpColumns1Result from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpColumns1", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetEmpColumns1Response GetEmpColumns1(ERPForm.ServiceReference1.GetEmpColumns1Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpColumns1", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpColumns1Response> GetEmpColumns1Async(ERPForm.ServiceReference1.GetEmpColumns1Request request);
+        
+        // CODEGEN: Generating message contract since element name GetEmpColumns2Result from namespace http://erpimlement.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpColumns2", ReplyAction="*")]
+        ERPForm.ServiceReference1.GetEmpColumns2Response GetEmpColumns2(ERPForm.ServiceReference1.GetEmpColumns2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://erpimlement.org/GetEmpColumns2", ReplyAction="*")]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpColumns2Response> GetEmpColumns2Async(ERPForm.ServiceReference1.GetEmpColumns2Request request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -118,15 +181,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FillRequest {
+    public partial class GetColumnsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Fill", Namespace="http://erpimlement.org/", Order=0)]
-        public ERPForm.ServiceReference1.FillRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetColumns", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetColumnsRequestBody Body;
         
-        public FillRequest() {
+        public GetColumnsRequest() {
         }
         
-        public FillRequest(ERPForm.ServiceReference1.FillRequestBody Body) {
+        public GetColumnsRequest(ERPForm.ServiceReference1.GetColumnsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -135,15 +198,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
-    public partial class FillRequestBody {
+    public partial class GetColumnsRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string s;
         
-        public FillRequestBody() {
+        public GetColumnsRequestBody() {
         }
         
-        public FillRequestBody(string s) {
+        public GetColumnsRequestBody(string s) {
             this.s = s;
         }
     }
@@ -152,15 +215,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FillResponse {
+    public partial class GetColumnsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FillResponse", Namespace="http://erpimlement.org/", Order=0)]
-        public ERPForm.ServiceReference1.FillResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetColumnsResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetColumnsResponseBody Body;
         
-        public FillResponse() {
+        public GetColumnsResponse() {
         }
         
-        public FillResponse(ERPForm.ServiceReference1.FillResponseBody Body) {
+        public GetColumnsResponse(ERPForm.ServiceReference1.GetColumnsResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -169,16 +232,16 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
-    public partial class FillResponseBody {
+    public partial class GetColumnsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public ERPForm.ServiceReference1.ArrayOfString[] FillResult;
+        public ERPForm.ServiceReference1.ArrayOfString GetColumnsResult;
         
-        public FillResponseBody() {
+        public GetColumnsResponseBody() {
         }
         
-        public FillResponseBody(ERPForm.ServiceReference1.ArrayOfString[] FillResult) {
-            this.FillResult = FillResult;
+        public GetColumnsResponseBody(ERPForm.ServiceReference1.ArrayOfString GetColumnsResult) {
+            this.GetColumnsResult = GetColumnsResult;
         }
     }
     
@@ -186,15 +249,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmpTblRequest {
+    public partial class GetEmployeeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpTbl", Namespace="http://erpimlement.org/", Order=0)]
-        public ERPForm.ServiceReference1.GetEmpTblRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployee", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmployeeRequestBody Body;
         
-        public GetEmpTblRequest() {
+        public GetEmployeeRequest() {
         }
         
-        public GetEmpTblRequest(ERPForm.ServiceReference1.GetEmpTblRequestBody Body) {
+        public GetEmployeeRequest(ERPForm.ServiceReference1.GetEmployeeRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -203,9 +266,9 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetEmpTblRequestBody {
+    public partial class GetEmployeeRequestBody {
         
-        public GetEmpTblRequestBody() {
+        public GetEmployeeRequestBody() {
         }
     }
     
@@ -213,15 +276,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetEmpTblResponse {
+    public partial class GetEmployeeResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpTblResponse", Namespace="http://erpimlement.org/", Order=0)]
-        public ERPForm.ServiceReference1.GetEmpTblResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeeResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmployeeResponseBody Body;
         
-        public GetEmpTblResponse() {
+        public GetEmployeeResponse() {
         }
         
-        public GetEmpTblResponse(ERPForm.ServiceReference1.GetEmpTblResponseBody Body) {
+        public GetEmployeeResponse(ERPForm.ServiceReference1.GetEmployeeResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -230,16 +293,16 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
-    public partial class GetEmpTblResponseBody {
+    public partial class GetEmployeeResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public ERPForm.ServiceReference1.ArrayOfString GetEmpTblResult;
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmployeeResult;
         
-        public GetEmpTblResponseBody() {
+        public GetEmployeeResponseBody() {
         }
         
-        public GetEmpTblResponseBody(ERPForm.ServiceReference1.ArrayOfString GetEmpTblResult) {
-            this.GetEmpTblResult = GetEmpTblResult;
+        public GetEmployeeResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetEmployeeResult) {
+            this.GetEmployeeResult = GetEmployeeResult;
         }
     }
     
@@ -247,15 +310,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowAbsDataRequest {
+    public partial class GetEmpRelativeDataRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowAbsData", Namespace="http://erpimlement.org/", Order=0)]
-        public ERPForm.ServiceReference1.ShowAbsDataRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpRelativeData", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpRelativeDataRequestBody Body;
         
-        public ShowAbsDataRequest() {
+        public GetEmpRelativeDataRequest() {
         }
         
-        public ShowAbsDataRequest(ERPForm.ServiceReference1.ShowAbsDataRequestBody Body) {
+        public GetEmpRelativeDataRequest(ERPForm.ServiceReference1.GetEmpRelativeDataRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -264,9 +327,9 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ShowAbsDataRequestBody {
+    public partial class GetEmpRelativeDataRequestBody {
         
-        public ShowAbsDataRequestBody() {
+        public GetEmpRelativeDataRequestBody() {
         }
     }
     
@@ -274,15 +337,15 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowAbsDataResponse {
+    public partial class GetEmpRelativeDataResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowAbsDataResponse", Namespace="http://erpimlement.org/", Order=0)]
-        public ERPForm.ServiceReference1.ShowAbsDataResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpRelativeDataResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpRelativeDataResponseBody Body;
         
-        public ShowAbsDataResponse() {
+        public GetEmpRelativeDataResponse() {
         }
         
-        public ShowAbsDataResponse(ERPForm.ServiceReference1.ShowAbsDataResponseBody Body) {
+        public GetEmpRelativeDataResponse(ERPForm.ServiceReference1.GetEmpRelativeDataResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -291,16 +354,565 @@ namespace ERPForm.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
-    public partial class ShowAbsDataResponseBody {
+    public partial class GetEmpRelativeDataResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public ERPForm.ServiceReference1.ArrayOfString[] ShowAbsDataResult;
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpRelativeDataResult;
         
-        public ShowAbsDataResponseBody() {
+        public GetEmpRelativeDataResponseBody() {
         }
         
-        public ShowAbsDataResponseBody(ERPForm.ServiceReference1.ArrayOfString[] ShowAbsDataResult) {
-            this.ShowAbsDataResult = ShowAbsDataResult;
+        public GetEmpRelativeDataResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetEmpRelativeDataResult) {
+            this.GetEmpRelativeDataResult = GetEmpRelativeDataResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpAbsDataRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpAbsData", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpAbsDataRequestBody Body;
+        
+        public GetEmpAbsDataRequest() {
+        }
+        
+        public GetEmpAbsDataRequest(ERPForm.ServiceReference1.GetEmpAbsDataRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmpAbsDataRequestBody {
+        
+        public GetEmpAbsDataRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpAbsDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpAbsDataResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpAbsDataResponseBody Body;
+        
+        public GetEmpAbsDataResponse() {
+        }
+        
+        public GetEmpAbsDataResponse(ERPForm.ServiceReference1.GetEmpAbsDataResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetEmpAbsDataResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpAbsDataResult;
+        
+        public GetEmpAbsDataResponseBody() {
+        }
+        
+        public GetEmpAbsDataResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetEmpAbsDataResult) {
+            this.GetEmpAbsDataResult = GetEmpAbsDataResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpTopAbsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpTopAbs", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpTopAbsRequestBody Body;
+        
+        public GetEmpTopAbsRequest() {
+        }
+        
+        public GetEmpTopAbsRequest(ERPForm.ServiceReference1.GetEmpTopAbsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmpTopAbsRequestBody {
+        
+        public GetEmpTopAbsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpTopAbsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpTopAbsResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpTopAbsResponseBody Body;
+        
+        public GetEmpTopAbsResponse() {
+        }
+        
+        public GetEmpTopAbsResponse(ERPForm.ServiceReference1.GetEmpTopAbsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetEmpTopAbsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpTopAbsResult;
+        
+        public GetEmpTopAbsResponseBody() {
+        }
+        
+        public GetEmpTopAbsResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetEmpTopAbsResult) {
+            this.GetEmpTopAbsResult = GetEmpTopAbsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllPKRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllPK", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetAllPKRequestBody Body;
+        
+        public GetAllPKRequest() {
+        }
+        
+        public GetAllPKRequest(ERPForm.ServiceReference1.GetAllPKRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllPKRequestBody {
+        
+        public GetAllPKRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllPKResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllPKResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetAllPKResponseBody Body;
+        
+        public GetAllPKResponse() {
+        }
+        
+        public GetAllPKResponse(ERPForm.ServiceReference1.GetAllPKResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetAllPKResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetAllPKResult;
+        
+        public GetAllPKResponseBody() {
+        }
+        
+        public GetAllPKResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetAllPKResult) {
+            this.GetAllPKResult = GetAllPKResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetIndexesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetIndexes", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetIndexesRequestBody Body;
+        
+        public GetIndexesRequest() {
+        }
+        
+        public GetIndexesRequest(ERPForm.ServiceReference1.GetIndexesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetIndexesRequestBody {
+        
+        public GetIndexesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetIndexesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetIndexesResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetIndexesResponseBody Body;
+        
+        public GetIndexesResponse() {
+        }
+        
+        public GetIndexesResponse(ERPForm.ServiceReference1.GetIndexesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetIndexesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetIndexesResult;
+        
+        public GetIndexesResponseBody() {
+        }
+        
+        public GetIndexesResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetIndexesResult) {
+            this.GetIndexesResult = GetIndexesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllConstraintsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllConstraints", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetAllConstraintsRequestBody Body;
+        
+        public GetAllConstraintsRequest() {
+        }
+        
+        public GetAllConstraintsRequest(ERPForm.ServiceReference1.GetAllConstraintsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllConstraintsRequestBody {
+        
+        public GetAllConstraintsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllConstraintsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllConstraintsResponse", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetAllConstraintsResponseBody Body;
+        
+        public GetAllConstraintsResponse() {
+        }
+        
+        public GetAllConstraintsResponse(ERPForm.ServiceReference1.GetAllConstraintsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetAllConstraintsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetAllConstraintsResult;
+        
+        public GetAllConstraintsResponseBody() {
+        }
+        
+        public GetAllConstraintsResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetAllConstraintsResult) {
+            this.GetAllConstraintsResult = GetAllConstraintsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTable1Request {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTable1", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetTable1RequestBody Body;
+        
+        public GetTable1Request() {
+        }
+        
+        public GetTable1Request(ERPForm.ServiceReference1.GetTable1RequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetTable1RequestBody {
+        
+        public GetTable1RequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTable1Response {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTable1Response", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetTable1ResponseBody Body;
+        
+        public GetTable1Response() {
+        }
+        
+        public GetTable1Response(ERPForm.ServiceReference1.GetTable1ResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetTable1ResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetTable1Result;
+        
+        public GetTable1ResponseBody() {
+        }
+        
+        public GetTable1ResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetTable1Result) {
+            this.GetTable1Result = GetTable1Result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTable2Request {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTable2", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetTable2RequestBody Body;
+        
+        public GetTable2Request() {
+        }
+        
+        public GetTable2Request(ERPForm.ServiceReference1.GetTable2RequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetTable2RequestBody {
+        
+        public GetTable2RequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTable2Response {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTable2Response", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetTable2ResponseBody Body;
+        
+        public GetTable2Response() {
+        }
+        
+        public GetTable2Response(ERPForm.ServiceReference1.GetTable2ResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetTable2ResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetTable2Result;
+        
+        public GetTable2ResponseBody() {
+        }
+        
+        public GetTable2ResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetTable2Result) {
+            this.GetTable2Result = GetTable2Result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpColumns1Request {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpColumns1", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpColumns1RequestBody Body;
+        
+        public GetEmpColumns1Request() {
+        }
+        
+        public GetEmpColumns1Request(ERPForm.ServiceReference1.GetEmpColumns1RequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmpColumns1RequestBody {
+        
+        public GetEmpColumns1RequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpColumns1Response {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpColumns1Response", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpColumns1ResponseBody Body;
+        
+        public GetEmpColumns1Response() {
+        }
+        
+        public GetEmpColumns1Response(ERPForm.ServiceReference1.GetEmpColumns1ResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetEmpColumns1ResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpColumns1Result;
+        
+        public GetEmpColumns1ResponseBody() {
+        }
+        
+        public GetEmpColumns1ResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetEmpColumns1Result) {
+            this.GetEmpColumns1Result = GetEmpColumns1Result;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpColumns2Request {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpColumns2", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpColumns2RequestBody Body;
+        
+        public GetEmpColumns2Request() {
+        }
+        
+        public GetEmpColumns2Request(ERPForm.ServiceReference1.GetEmpColumns2RequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetEmpColumns2RequestBody {
+        
+        public GetEmpColumns2RequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetEmpColumns2Response {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmpColumns2Response", Namespace="http://erpimlement.org/", Order=0)]
+        public ERPForm.ServiceReference1.GetEmpColumns2ResponseBody Body;
+        
+        public GetEmpColumns2Response() {
+        }
+        
+        public GetEmpColumns2Response(ERPForm.ServiceReference1.GetEmpColumns2ResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://erpimlement.org/")]
+    public partial class GetEmpColumns2ResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpColumns2Result;
+        
+        public GetEmpColumns2ResponseBody() {
+        }
+        
+        public GetEmpColumns2ResponseBody(ERPForm.ServiceReference1.ArrayOfString[] GetEmpColumns2Result) {
+            this.GetEmpColumns2Result = GetEmpColumns2Result;
         }
     }
     
@@ -355,74 +967,281 @@ namespace ERPForm.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ERPForm.ServiceReference1.FillResponse ERPForm.ServiceReference1.ERPServiceSoap.Fill(ERPForm.ServiceReference1.FillRequest request) {
-            return base.Channel.Fill(request);
+        ERPForm.ServiceReference1.GetColumnsResponse ERPForm.ServiceReference1.ERPServiceSoap.GetColumns(ERPForm.ServiceReference1.GetColumnsRequest request) {
+            return base.Channel.GetColumns(request);
         }
         
-        public ERPForm.ServiceReference1.ArrayOfString[] Fill(string s) {
-            ERPForm.ServiceReference1.FillRequest inValue = new ERPForm.ServiceReference1.FillRequest();
-            inValue.Body = new ERPForm.ServiceReference1.FillRequestBody();
+        public ERPForm.ServiceReference1.ArrayOfString GetColumns(string s) {
+            ERPForm.ServiceReference1.GetColumnsRequest inValue = new ERPForm.ServiceReference1.GetColumnsRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetColumnsRequestBody();
             inValue.Body.s = s;
-            ERPForm.ServiceReference1.FillResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).Fill(inValue);
-            return retVal.Body.FillResult;
+            ERPForm.ServiceReference1.GetColumnsResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetColumns(inValue);
+            return retVal.Body.GetColumnsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ERPForm.ServiceReference1.FillResponse> ERPForm.ServiceReference1.ERPServiceSoap.FillAsync(ERPForm.ServiceReference1.FillRequest request) {
-            return base.Channel.FillAsync(request);
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetColumnsResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetColumnsAsync(ERPForm.ServiceReference1.GetColumnsRequest request) {
+            return base.Channel.GetColumnsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.FillResponse> FillAsync(string s) {
-            ERPForm.ServiceReference1.FillRequest inValue = new ERPForm.ServiceReference1.FillRequest();
-            inValue.Body = new ERPForm.ServiceReference1.FillRequestBody();
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetColumnsResponse> GetColumnsAsync(string s) {
+            ERPForm.ServiceReference1.GetColumnsRequest inValue = new ERPForm.ServiceReference1.GetColumnsRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetColumnsRequestBody();
             inValue.Body.s = s;
-            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).FillAsync(inValue);
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetColumnsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ERPForm.ServiceReference1.GetEmpTblResponse ERPForm.ServiceReference1.ERPServiceSoap.GetEmpTbl(ERPForm.ServiceReference1.GetEmpTblRequest request) {
-            return base.Channel.GetEmpTbl(request);
+        ERPForm.ServiceReference1.GetEmployeeResponse ERPForm.ServiceReference1.ERPServiceSoap.GetEmployee(ERPForm.ServiceReference1.GetEmployeeRequest request) {
+            return base.Channel.GetEmployee(request);
         }
         
-        public ERPForm.ServiceReference1.ArrayOfString GetEmpTbl() {
-            ERPForm.ServiceReference1.GetEmpTblRequest inValue = new ERPForm.ServiceReference1.GetEmpTblRequest();
-            inValue.Body = new ERPForm.ServiceReference1.GetEmpTblRequestBody();
-            ERPForm.ServiceReference1.GetEmpTblResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpTbl(inValue);
-            return retVal.Body.GetEmpTblResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpTblResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetEmpTblAsync(ERPForm.ServiceReference1.GetEmpTblRequest request) {
-            return base.Channel.GetEmpTblAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpTblResponse> GetEmpTblAsync() {
-            ERPForm.ServiceReference1.GetEmpTblRequest inValue = new ERPForm.ServiceReference1.GetEmpTblRequest();
-            inValue.Body = new ERPForm.ServiceReference1.GetEmpTblRequestBody();
-            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpTblAsync(inValue);
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmployee() {
+            ERPForm.ServiceReference1.GetEmployeeRequest inValue = new ERPForm.ServiceReference1.GetEmployeeRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmployeeRequestBody();
+            ERPForm.ServiceReference1.GetEmployeeResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmployee(inValue);
+            return retVal.Body.GetEmployeeResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ERPForm.ServiceReference1.ShowAbsDataResponse ERPForm.ServiceReference1.ERPServiceSoap.ShowAbsData(ERPForm.ServiceReference1.ShowAbsDataRequest request) {
-            return base.Channel.ShowAbsData(request);
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmployeeResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetEmployeeAsync(ERPForm.ServiceReference1.GetEmployeeRequest request) {
+            return base.Channel.GetEmployeeAsync(request);
         }
         
-        public ERPForm.ServiceReference1.ArrayOfString[] ShowAbsData() {
-            ERPForm.ServiceReference1.ShowAbsDataRequest inValue = new ERPForm.ServiceReference1.ShowAbsDataRequest();
-            inValue.Body = new ERPForm.ServiceReference1.ShowAbsDataRequestBody();
-            ERPForm.ServiceReference1.ShowAbsDataResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).ShowAbsData(inValue);
-            return retVal.Body.ShowAbsDataResult;
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmployeeResponse> GetEmployeeAsync() {
+            ERPForm.ServiceReference1.GetEmployeeRequest inValue = new ERPForm.ServiceReference1.GetEmployeeRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmployeeRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmployeeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ERPForm.ServiceReference1.ShowAbsDataResponse> ERPForm.ServiceReference1.ERPServiceSoap.ShowAbsDataAsync(ERPForm.ServiceReference1.ShowAbsDataRequest request) {
-            return base.Channel.ShowAbsDataAsync(request);
+        ERPForm.ServiceReference1.GetEmpRelativeDataResponse ERPForm.ServiceReference1.ERPServiceSoap.GetEmpRelativeData(ERPForm.ServiceReference1.GetEmpRelativeDataRequest request) {
+            return base.Channel.GetEmpRelativeData(request);
         }
         
-        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.ShowAbsDataResponse> ShowAbsDataAsync() {
-            ERPForm.ServiceReference1.ShowAbsDataRequest inValue = new ERPForm.ServiceReference1.ShowAbsDataRequest();
-            inValue.Body = new ERPForm.ServiceReference1.ShowAbsDataRequestBody();
-            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).ShowAbsDataAsync(inValue);
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpRelativeData() {
+            ERPForm.ServiceReference1.GetEmpRelativeDataRequest inValue = new ERPForm.ServiceReference1.GetEmpRelativeDataRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpRelativeDataRequestBody();
+            ERPForm.ServiceReference1.GetEmpRelativeDataResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpRelativeData(inValue);
+            return retVal.Body.GetEmpRelativeDataResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpRelativeDataResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetEmpRelativeDataAsync(ERPForm.ServiceReference1.GetEmpRelativeDataRequest request) {
+            return base.Channel.GetEmpRelativeDataAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpRelativeDataResponse> GetEmpRelativeDataAsync() {
+            ERPForm.ServiceReference1.GetEmpRelativeDataRequest inValue = new ERPForm.ServiceReference1.GetEmpRelativeDataRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpRelativeDataRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpRelativeDataAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetEmpAbsDataResponse ERPForm.ServiceReference1.ERPServiceSoap.GetEmpAbsData(ERPForm.ServiceReference1.GetEmpAbsDataRequest request) {
+            return base.Channel.GetEmpAbsData(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpAbsData() {
+            ERPForm.ServiceReference1.GetEmpAbsDataRequest inValue = new ERPForm.ServiceReference1.GetEmpAbsDataRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpAbsDataRequestBody();
+            ERPForm.ServiceReference1.GetEmpAbsDataResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpAbsData(inValue);
+            return retVal.Body.GetEmpAbsDataResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpAbsDataResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetEmpAbsDataAsync(ERPForm.ServiceReference1.GetEmpAbsDataRequest request) {
+            return base.Channel.GetEmpAbsDataAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpAbsDataResponse> GetEmpAbsDataAsync() {
+            ERPForm.ServiceReference1.GetEmpAbsDataRequest inValue = new ERPForm.ServiceReference1.GetEmpAbsDataRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpAbsDataRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpAbsDataAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetEmpTopAbsResponse ERPForm.ServiceReference1.ERPServiceSoap.GetEmpTopAbs(ERPForm.ServiceReference1.GetEmpTopAbsRequest request) {
+            return base.Channel.GetEmpTopAbs(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpTopAbs() {
+            ERPForm.ServiceReference1.GetEmpTopAbsRequest inValue = new ERPForm.ServiceReference1.GetEmpTopAbsRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpTopAbsRequestBody();
+            ERPForm.ServiceReference1.GetEmpTopAbsResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpTopAbs(inValue);
+            return retVal.Body.GetEmpTopAbsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpTopAbsResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetEmpTopAbsAsync(ERPForm.ServiceReference1.GetEmpTopAbsRequest request) {
+            return base.Channel.GetEmpTopAbsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpTopAbsResponse> GetEmpTopAbsAsync() {
+            ERPForm.ServiceReference1.GetEmpTopAbsRequest inValue = new ERPForm.ServiceReference1.GetEmpTopAbsRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpTopAbsRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpTopAbsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetAllPKResponse ERPForm.ServiceReference1.ERPServiceSoap.GetAllPK(ERPForm.ServiceReference1.GetAllPKRequest request) {
+            return base.Channel.GetAllPK(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetAllPK() {
+            ERPForm.ServiceReference1.GetAllPKRequest inValue = new ERPForm.ServiceReference1.GetAllPKRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetAllPKRequestBody();
+            ERPForm.ServiceReference1.GetAllPKResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetAllPK(inValue);
+            return retVal.Body.GetAllPKResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetAllPKResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetAllPKAsync(ERPForm.ServiceReference1.GetAllPKRequest request) {
+            return base.Channel.GetAllPKAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetAllPKResponse> GetAllPKAsync() {
+            ERPForm.ServiceReference1.GetAllPKRequest inValue = new ERPForm.ServiceReference1.GetAllPKRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetAllPKRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetAllPKAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetIndexesResponse ERPForm.ServiceReference1.ERPServiceSoap.GetIndexes(ERPForm.ServiceReference1.GetIndexesRequest request) {
+            return base.Channel.GetIndexes(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetIndexes() {
+            ERPForm.ServiceReference1.GetIndexesRequest inValue = new ERPForm.ServiceReference1.GetIndexesRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetIndexesRequestBody();
+            ERPForm.ServiceReference1.GetIndexesResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetIndexes(inValue);
+            return retVal.Body.GetIndexesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetIndexesResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetIndexesAsync(ERPForm.ServiceReference1.GetIndexesRequest request) {
+            return base.Channel.GetIndexesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetIndexesResponse> GetIndexesAsync() {
+            ERPForm.ServiceReference1.GetIndexesRequest inValue = new ERPForm.ServiceReference1.GetIndexesRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetIndexesRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetIndexesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetAllConstraintsResponse ERPForm.ServiceReference1.ERPServiceSoap.GetAllConstraints(ERPForm.ServiceReference1.GetAllConstraintsRequest request) {
+            return base.Channel.GetAllConstraints(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetAllConstraints() {
+            ERPForm.ServiceReference1.GetAllConstraintsRequest inValue = new ERPForm.ServiceReference1.GetAllConstraintsRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetAllConstraintsRequestBody();
+            ERPForm.ServiceReference1.GetAllConstraintsResponse retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetAllConstraints(inValue);
+            return retVal.Body.GetAllConstraintsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetAllConstraintsResponse> ERPForm.ServiceReference1.ERPServiceSoap.GetAllConstraintsAsync(ERPForm.ServiceReference1.GetAllConstraintsRequest request) {
+            return base.Channel.GetAllConstraintsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetAllConstraintsResponse> GetAllConstraintsAsync() {
+            ERPForm.ServiceReference1.GetAllConstraintsRequest inValue = new ERPForm.ServiceReference1.GetAllConstraintsRequest();
+            inValue.Body = new ERPForm.ServiceReference1.GetAllConstraintsRequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetAllConstraintsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetTable1Response ERPForm.ServiceReference1.ERPServiceSoap.GetTable1(ERPForm.ServiceReference1.GetTable1Request request) {
+            return base.Channel.GetTable1(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetTable1() {
+            ERPForm.ServiceReference1.GetTable1Request inValue = new ERPForm.ServiceReference1.GetTable1Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetTable1RequestBody();
+            ERPForm.ServiceReference1.GetTable1Response retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetTable1(inValue);
+            return retVal.Body.GetTable1Result;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetTable1Response> ERPForm.ServiceReference1.ERPServiceSoap.GetTable1Async(ERPForm.ServiceReference1.GetTable1Request request) {
+            return base.Channel.GetTable1Async(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetTable1Response> GetTable1Async() {
+            ERPForm.ServiceReference1.GetTable1Request inValue = new ERPForm.ServiceReference1.GetTable1Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetTable1RequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetTable1Async(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetTable2Response ERPForm.ServiceReference1.ERPServiceSoap.GetTable2(ERPForm.ServiceReference1.GetTable2Request request) {
+            return base.Channel.GetTable2(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetTable2() {
+            ERPForm.ServiceReference1.GetTable2Request inValue = new ERPForm.ServiceReference1.GetTable2Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetTable2RequestBody();
+            ERPForm.ServiceReference1.GetTable2Response retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetTable2(inValue);
+            return retVal.Body.GetTable2Result;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetTable2Response> ERPForm.ServiceReference1.ERPServiceSoap.GetTable2Async(ERPForm.ServiceReference1.GetTable2Request request) {
+            return base.Channel.GetTable2Async(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetTable2Response> GetTable2Async() {
+            ERPForm.ServiceReference1.GetTable2Request inValue = new ERPForm.ServiceReference1.GetTable2Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetTable2RequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetTable2Async(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetEmpColumns1Response ERPForm.ServiceReference1.ERPServiceSoap.GetEmpColumns1(ERPForm.ServiceReference1.GetEmpColumns1Request request) {
+            return base.Channel.GetEmpColumns1(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpColumns1() {
+            ERPForm.ServiceReference1.GetEmpColumns1Request inValue = new ERPForm.ServiceReference1.GetEmpColumns1Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpColumns1RequestBody();
+            ERPForm.ServiceReference1.GetEmpColumns1Response retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpColumns1(inValue);
+            return retVal.Body.GetEmpColumns1Result;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpColumns1Response> ERPForm.ServiceReference1.ERPServiceSoap.GetEmpColumns1Async(ERPForm.ServiceReference1.GetEmpColumns1Request request) {
+            return base.Channel.GetEmpColumns1Async(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpColumns1Response> GetEmpColumns1Async() {
+            ERPForm.ServiceReference1.GetEmpColumns1Request inValue = new ERPForm.ServiceReference1.GetEmpColumns1Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpColumns1RequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpColumns1Async(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ERPForm.ServiceReference1.GetEmpColumns2Response ERPForm.ServiceReference1.ERPServiceSoap.GetEmpColumns2(ERPForm.ServiceReference1.GetEmpColumns2Request request) {
+            return base.Channel.GetEmpColumns2(request);
+        }
+        
+        public ERPForm.ServiceReference1.ArrayOfString[] GetEmpColumns2() {
+            ERPForm.ServiceReference1.GetEmpColumns2Request inValue = new ERPForm.ServiceReference1.GetEmpColumns2Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpColumns2RequestBody();
+            ERPForm.ServiceReference1.GetEmpColumns2Response retVal = ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpColumns2(inValue);
+            return retVal.Body.GetEmpColumns2Result;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpColumns2Response> ERPForm.ServiceReference1.ERPServiceSoap.GetEmpColumns2Async(ERPForm.ServiceReference1.GetEmpColumns2Request request) {
+            return base.Channel.GetEmpColumns2Async(request);
+        }
+        
+        public System.Threading.Tasks.Task<ERPForm.ServiceReference1.GetEmpColumns2Response> GetEmpColumns2Async() {
+            ERPForm.ServiceReference1.GetEmpColumns2Request inValue = new ERPForm.ServiceReference1.GetEmpColumns2Request();
+            inValue.Body = new ERPForm.ServiceReference1.GetEmpColumns2RequestBody();
+            return ((ERPForm.ServiceReference1.ERPServiceSoap)(this)).GetEmpColumns2Async(inValue);
         }
     }
 }
